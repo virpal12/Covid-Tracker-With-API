@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.push(
+      Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => WordState()));
     });
   }
@@ -43,10 +43,10 @@ class _SplashScreenState extends State<SplashScreen>
           AnimatedBuilder(
               animation: _controller,
               child: Container(
-                height: 300,
-                width: 300,
+                height: 200,
+                width: 200,
                 child: Image(
-                  image: AssetImage("Images/virus.png"),
+                  image: AssetImage("Assets/images/virus.png"),
                 ),
               ),
               builder: (BuildContext context, Widget? child) {
@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen>
                 );
               }),
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.5,
+            height: MediaQuery.sizeOf(context).height * 0.3,
           ),
           Align(
               alignment: Alignment.center,
